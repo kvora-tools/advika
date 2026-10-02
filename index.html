@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advika Fabrications | Precision Metal Fabrication in Bengaluru</title>
+    <meta name="description" content="Top-notch metal fabrication, MS & SS fabrication, structural steel work, gates, railings, staircases, and industrial roofing in Bengaluru. Call 9060975164.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        steel: {
+                            950: '#0b0c0e',
+                            900: '#111317',
+                            850: '#15181e',
+                            800: '#1c2028',
+                            700: '#2a303c',
+                            600: '#40495a',
+                            400: '#73829c',
+                            300: '#9eaeca',
+                            100: '#e1e7f0',
+                        },
+                        amberGlow: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            ff: '#ff6b00',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                        tech: ['Rajdhani', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Style Animations and Keyframes -->
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0c0e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2a303c;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f59e0b;
+        }
+
+        /* Spark canvas overlay */
+        #sparkCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        /* Infinite Marquee continuous scroll */
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: 200%;
+            animation: marquee 35s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+
+        /* Glowing accents */
+        .glow-amber {
+            box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.4);
+        }
+        .glow-amber-lg {
+            box-shadow: 0 0 40px -2px rgba(255, 107, 0, 0.5);
+        }
+
+        /* Glassmorphic elements */
+        .glass-panel {
+            background: rgba(24, 27, 32, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-panel-hover:hover {
+            background: rgba(28, 32, 40, 0.9);
+            border-color: rgba(245, 158, 11, 0.4);
+            transform: translateY(-4px);
+        }
+
+        /* Clip path angular button */
+        .clip-slant {
+            clip-path: polygon(0 0, 100% 0, 92% 100%, 0% 100%);
+        }
+
+        /* Metallic shine keyframe */
+        @keyframes metallicShine {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .shine-effect {
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0) 100%);
+            background-size: 200% 100%;
+            animation: metallicShine 4s infinite;
+        }
+    </style>
+</head>
+<body class="bg-steel-950 text-steel-100 font-sans antialiased selection:bg-amber-500 selection:text-black overflow-x-hidden">
+
+    <!-- NAVIGATION BAR -->
+    <header id="mainNav" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-steel-950/80 backdrop-blur-md border-b border-steel-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Company Logo -->
+            <a href="#home" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 bg-gradient-to-br from-amber-500 to-amber-600 rounded-lg flex items-center justify-center shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform duration-300">
+                    <i data-lucide="anvil" class="w-6 h-6 text-steel-950"></i>
+                </div>
+                <div>
+                    <span class="text-xl sm:text-2xl font-black font-heading tracking-wider text-white uppercase flex items-center gap-1">
+                        ADVIKA <span class="text-amber-500">FAB</span>
+                    </span>
+                    <span class="block text-[10px] font-tech text-steel-400 tracking-widest uppercase">Precision Metalwork • Bengaluru</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm tracking-wide text-steel-300">
+                <a href="#home" class="hover:text-amber-500 transition-colors py-1">Home</a>
+                <a href="#about" class="hover:text-amber-500 transition-colors py-1">About Us</a>
+                <a href="#services" class="hover:text-amber-500 transition-colors py-1">Services</a>
+                <a href="#work" class="hover:text-amber-500 transition-colors py-1">Our Work</a>
+                <a href="#whyus" class="hover:text-amber-500 transition-colors py-1">Why Us</a>
+                <a href="#process" class="hover:text-amber-500 transition-colors py-1">Process</a>
+                <a href="#contact" class="hover:text-amber-500 transition-colors py-1">Contact</a>
+            </nav>
+
+            <!-- Quick Action Phone & Quote CTA -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="tel:9060975164" class="flex items-center gap-2 text-sm font-semibold text-white hover:text-amber-400 transition-colors px-3 py-2 rounded-lg bg-steel-900 border border-steel-800">
+                    <i data-lucide="phone-call" class="w-4 h-4 text-amber-500 animate-pulse"></i>
+                    <span>9060975164</span>
+                </a>
+                <button onclick="openModal('Get Free Project Estimation')" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-steel-950 font-bold px-5 py-2.5 rounded-lg text-sm tracking-wide shadow-md hover:shadow-amber-500/25 transition-all duration-300 flex items-center gap-2">
+                    <i data-lucide="file-text" class="w-4 h-4"></i>
+                    Get Quote
+                </button>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobileMenuBtn" aria-label="Toggle mobile menu" class="lg:hidden p-2 rounded-lg bg-steel-900 border border-steel-800 text-steel-300 hover:text-white focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6" id="menuIcon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobileDrawer" class="hidden lg:hidden bg-steel-900/98 border-b border-steel-800 backdrop-blur-xl px-6 py-6 transition-all duration-300">
+            <div class="flex flex-col space-y-4 font-medium text-base text-steel-200">
+                <a href="#home" class="mobile-link py-2 border-b border-steel-800/50 hover:text-amber-500">Home</a>
+                <a href="#about" class="mobile-link py-2 border-b border-steel-800/50 hover:text-amber-500">About Us</a>
+                <a href="#services" class="mobile-link py-2 border-b border-steel-800/50 hover:text-amber-500">Services</a>
+                <a href="#work" class="mobile-link py-2 border-b border-steel-800/50 hover:text-amber-500">Our Work Gallery</a>
+                <a href="#whyus" class="mobile-link py-2 border-b border-steel-800/50 hover:text-amber-500">Why Choose Us</a>
+                <a href="#process" class="mobile-link py-2 border-b border-steel-800/50 hover:text-amber-500">Working Process</a>
+                <a href="#contact" class="mobile-link py-2 border-b border-steel-800/50 hover:text-amber-500">Contact Us</a>
+                
+                <div class="pt-4 flex flex-col gap-3">
+                    <a href="tel:9060975164" class="w-full py-3 bg-steel-800 border border-steel-700 text-white rounded-xl flex items-center justify-center gap-2 font-bold text-sm">
+                        <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i> Call: 9060975164
+                    </a>
+                    <button onclick="openModal('Get Free Project Estimation')" class="w-full py-3 bg-amber-500 text-steel-950 font-bold rounded-xl text-sm flex items-center justify-center gap-2">
+                        <i data-lucide="sparkles" class="w-4 h-4"></i> Get a Free Quote
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative min-h-screen pt-28 pb-16 flex items-center justify-center overflow-hidden bg-steel-950">
+        <!-- Cinematic Background Photo with dark vignette -->
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop" 
+                 alt="Welder at work in steel workshop" 
+                 class="w-full h-full object-cover object-center filter brightness-[0.35] contrast-[1.25] scale-105 transition-transform duration-10000">
+            <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-steel-950/70 to-steel-950/40"></div>
+            <div class="absolute inset-0 bg-radial-at-c from-transparent via-steel-950/60 to-steel-950"></div>
+        </div>
+
+        <!-- Interactive Welder Spark Canvas Overlay -->
+        <canvas id="sparkCanvas"></canvas>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8">
+            
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-steel-900/90 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-semibold tracking-wider uppercase mb-8 shadow-xl backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-amber-500 animate-ping"></span>
+                Top-Rated Metal Fabrication Workshop • Bengaluru
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-black font-heading text-white uppercase tracking-tight leading-[1.1] mb-6 max-w-5xl mx-auto">
+                Precision Fabrication. <br class="hidden sm:inline" />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600">Built to Last.</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-lg sm:text-xl text-steel-300 max-w-3xl mx-auto font-normal leading-relaxed mb-10">
+                Custom metalwork, heavy structural steel fabrication, stainless steel finishing, modern gates, and industrial sheds crafted with millimeter precision and unmatched durability in Bengaluru.
+            </p>
+
+            <!-- Call To Actions -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-16 max-w-xl mx-auto">
+                <a href="tel:9060975164" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-amber-500 via-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-steel-950 font-extrabold rounded-xl shadow-lg shadow-amber-500/30 transition-all duration-300 text-base sm:text-lg flex items-center justify-center gap-3 group">
+                    <i data-lucide="phone" class="w-5 h-5 fill-steel-950 group-hover:rotate-12 transition-transform"></i>
+                    <span>Call 9060975164</span>
+                </a>
+
+                <button onclick="openModal('Hero Quote Request')" class="w-full sm:w-auto px-8 py-4 bg-steel-900/90 hover:bg-steel-800 text-white font-bold rounded-xl border border-steel-700 hover:border-amber-500/50 transition-all duration-300 text-base sm:text-lg flex items-center justify-center gap-3 backdrop-blur-md">
+                    <i data-lucide="calculator" class="w-5 h-5 text-amber-500"></i>
+                    <span>Get Free Quote</span>
+                </button>
+
+                <a href="https://wa.me/919060975164?text=Hello%20Advika%20Fabrications,%20I%20would%20like%20to%20inquire%20about%20fabrication%20work." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-4 bg-emerald-600/90 hover:bg-emerald-600 text-white font-semibold rounded-xl border border-emerald-500/40 transition-all duration-300 text-base flex items-center justify-center gap-2 backdrop-blur-md">
+                    <i data-lucide="message-square" class="w-5 h-5"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto pt-6 border-t border-steel-800/80">
+                <div class="p-4 rounded-xl bg-steel-900/50 border border-steel-800/60 backdrop-blur-sm">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-tech text-amber-500 counter" data-target="15">0</div>
+                    <div class="text-xs sm:text-sm text-steel-400 font-medium uppercase tracking-wider mt-1">Years Experience</div>
+                </div>
+                <div class="p-4 rounded-xl bg-steel-900/50 border border-steel-800/60 backdrop-blur-sm">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-tech text-white counter" data-target="650">0</div>
+                    <div class="text-xs sm:text-sm text-steel-400 font-medium uppercase tracking-wider mt-1">Projects Delivered</div>
+                </div>
+                <div class="p-4 rounded-xl bg-steel-900/50 border border-steel-800/60 backdrop-blur-sm">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-tech text-amber-500">100%</div>
+                    <div class="text-xs sm:text-sm text-steel-400 font-medium uppercase tracking-wider mt-1">Custom Engineering</div>
+                </div>
+                <div class="p-4 rounded-xl bg-steel-900/50 border border-steel-800/60 backdrop-blur-sm">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-tech text-white flex items-center justify-center gap-1">
+                        4.9 <i data-lucide="star" class="w-5 h-5 fill-amber-500 text-amber-500"></i>
+                    </div>
+                    <div class="text-xs sm:text-sm text-steel-400 font-medium uppercase tracking-wider mt-1">Client Satisfaction</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <section id="about" class="py-24 bg-steel-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-amber-500 font-tech font-bold tracking-widest text-sm uppercase">
+                        <i data-lucide="shield-check" class="w-4 h-4"></i> Reliable Fabrication Partner
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-black font-heading text-white uppercase tracking-tight">
+                        Engineered Strength, <br />
+                        <span class="text-amber-500">Flawless Finishing.</span>
+                    </h2>
+                    <p class="text-steel-300 text-base sm:text-lg leading-relaxed">
+                        At <strong class="text-white">Advika Fabrications</strong>, led by experienced industrial professionals, we turn raw metals into strong, beautiful, and enduring structural solutions. Located in Bengaluru, Karnataka, we specialize in heavy-duty Mild Steel (MS) and Stainless Steel (SS) fabrication for commercial, industrial, and residential projects.
+                    </p>
+                    <p class="text-steel-400 text-base leading-relaxed">
+                        From high-load industrial roofing trusses to high-end laser-cut gates, staircase handrails, and precision machinery frames, we combine certified MIG/TIG welding, exact measurements, and corrosion-resistant coatings tailored specifically to customer specifications.
+                    </p>
+
+                    <!-- Key Pillars Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-start gap-3 p-3 rounded-xl bg-steel-950/60 border border-steel-800">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-amber-500 shrink-0 mt-0.5"></i>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Certified Welding & Alignment</h4>
+                                <p class="text-steel-400 text-xs">MIG, TIG, and Arc welding with ultra-clean bead joints.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-3 rounded-xl bg-steel-950/60 border border-steel-800">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-amber-500 shrink-0 mt-0.5"></i>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">High-Grade Raw Steel</h4>
+                                <p class="text-steel-400 text-xs">Certified Tata/JSW steel profiles with heavy gauge tolerance.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-3 rounded-xl bg-steel-950/60 border border-steel-800">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-amber-500 shrink-0 mt-0.5"></i>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">On-Time On-Site Installation</h4>
+                                <p class="text-steel-400 text-xs">Direct field installation by skilled fabricators in Bengaluru.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-3 rounded-xl bg-steel-950/60 border border-steel-800">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-amber-500 shrink-0 mt-0.5"></i>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Custom Tailored Engineering</h4>
+                                <p class="text-steel-400 text-xs">Built strictly according to architectural drawings & load specs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct contact highlight -->
+                    <div class="pt-4 flex items-center gap-6">
+                        <div>
+                            <span class="block text-xs text-steel-400 uppercase tracking-widest font-tech">Proprietor Contact</span>
+                            <a href="mailto:ashokshetty@gmail.com" class="text-white hover:text-amber-400 font-semibold text-sm sm:text-base flex items-center gap-2">
+                                <i data-lucide="mail" class="w-4 h-4 text-amber-500"></i> ashokshetty@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual: Interactive Before / After Fabrication Slider -->
+                <div class="lg:col-span-5">
+                    <div class="bg-steel-950 p-4 rounded-2xl border border-steel-800 shadow-2xl space-y-3">
+                        <div class="flex items-center justify-between px-2">
+                            <span class="text-xs font-bold font-tech uppercase text-amber-400 flex items-center gap-2">
+                                <i data-lucide="sliders" class="w-4 h-4"></i> Interactive Transformation Showcase
+                            </span>
+                            <span class="text-[11px] text-steel-400">Drag handle to compare</span>
+                        </div>
+
+                        <!-- Before / After Container -->
+                        <div id="beforeAfterSlider" class="relative w-full h-[380px] sm:h-[420px] rounded-xl overflow-hidden select-none cursor-ew-resize border border-steel-800">
+                            <!-- After Image (Finished architectural staircase/railing) -->
+                            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop" 
+                                 alt="Finished Custom Fabricated Staircase" 
+                                 class="absolute inset-0 w-full h-full object-cover">
+                            <span class="absolute bottom-3 right-3 bg-emerald-600/90 backdrop-blur-md text-white text-xs px-2.5 py-1 rounded font-bold uppercase tracking-wider z-10">Finished Project</span>
+
+                            <!-- Before Image (Raw welding / metal frame skeleton cut) -->
+                            <div id="beforeImageWrapper" class="absolute inset-0 w-1/2 overflow-hidden border-r-2 border-amber-500">
+                                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1200&auto=format&fit=crop" 
+                                     alt="Raw Welding Structural Skeleton" 
+                                     class="absolute inset-0 max-w-none h-full object-cover" id="beforeImage">
+                                <span class="absolute bottom-3 left-3 bg-steel-900/90 backdrop-blur-md text-amber-400 text-xs px-2.5 py-1 rounded font-bold uppercase tracking-wider z-10">In-Progress Weld</span>
+                            </div>
+
+                            <!-- Slider Handle -->
+                            <div id="sliderHandle" class="absolute top-0 bottom-0 left-1/2 -ml-3 w-6 flex items-center justify-center z-20 pointer-events-none">
+                                <div class="w-7 h-12 bg-amber-500 text-steel-950 rounded-md shadow-lg flex items-center justify-center font-bold text-xs">
+                                    <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-center text-steel-400 italic">
+                            Showing progression from precision structural fitting to sleek powder-coated architectural finish.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-24 bg-steel-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 text-amber-500 font-tech font-bold tracking-widest text-sm uppercase">
+                    <i data-lucide="wrench" class="w-4 h-4"></i> Our Expertise
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-black font-heading text-white uppercase tracking-tight mt-2">
+                    Comprehensive Fabrication <span class="text-amber-500">Services</span>
+                </h2>
+                <p class="text-steel-400 text-base mt-4">
+                    High-precision engineering and custom metal solutions designed for residential, commercial, and heavy industrial needs.
+                </p>
+            </div>
+
+            <!-- 10 Service Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="glass-panel rounded-2xl p-6 glass-panel-hover transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-48 rounded-xl overflow-hidden mb-6">
+                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop" alt="MS & SS Fabrication" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-steel-900/90 text-amber-400 text-xs font-tech font-bold px-3 py-1 rounded border border-steel-700">01</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white font-heading group-hover:text-amber-400 transition-colors">MS & SS Fabrication</h3>
+                        <p class="text-steel-400 text-sm mt-2 leading-relaxed">
+                            Mild Steel (MS) structural framing and Stainless Steel (SS 304/316 grade) custom fabrication with mirror or satin brush finishing.
+                        </p>
+                    </div>
+                    <button onclick="openModal('MS & SS Fabrication')" class="mt-6 w-full py-2.5 rounded-lg bg-steel-800 hover:bg-amber-500 hover:text-steel-950 text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2">
+                        <span>Request Quote</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-panel rounded-2xl p-6 glass-panel-hover transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-48 rounded-xl overflow-hidden mb-6">
+                            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format&fit=crop" alt="Structural Fabrication" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-steel-900/90 text-amber-400 text-xs font-tech font-bold px-3 py-1 rounded border border-steel-700">02</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white font-heading group-hover:text-amber-400 transition-colors">Structural Fabrication</h3>
+                        <p class="text-steel-400 text-sm mt-2 leading-relaxed">
+                            Heavy load-bearing steel I-Beams, columns, trusses, factory mezzaNine floors, and multi-story structural steel frameworks.
+                        </p>
+                    </div>
+                    <button onclick="openModal('Structural Fabrication')" class="mt-6 w-full py-2.5 rounded-lg bg-steel-800 hover:bg-amber-500 hover:text-steel-950 text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2">
+                        <span>Request Quote</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-panel rounded-2xl p-6 glass-panel-hover transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-48 rounded-xl overflow-hidden mb-6">
+                            <img src="https://images.unsplash.com/photo-1535813547-99c456a41d4a?q=80&w=800&auto=format&fit=crop" alt="Custom Metal Fabrication" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-steel-900/90 text-amber-400 text-xs font-tech font-bold px-3 py-1 rounded border border-steel-700">03</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white font-heading group-hover:text-amber-400 transition-colors">Custom Metal Fabrication</h3>
+                        <p class="text-steel-400 text-sm mt-2 leading-relaxed">
+                            Tailor-made sheet metal cutting, bending, custom enclosures, architectural metal features, and bespoke client designs.
+                        </p>
+                    </div>
+                    <button onclick="openModal('Custom Metal Fabrication')" class="mt-6 w-full py-2.5 rounded-lg bg-steel-800 hover:bg-amber-500 hover:text-steel-950 text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2">
+                        <span>Request Quote</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-panel rounded-2xl p-6 glass-panel-hover transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-48 rounded-xl overflow-hidden mb-6">
+                            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" alt="Gates & Grills" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-steel-900/90 text-amber-400 text-xs font-tech font-bold px-3 py-1 rounded border border-steel-700">04</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white font-heading group-hover:text-amber-400 transition-colors">Gates & Safety Grills</h3>
+                        <p class="text-steel-400 text-sm mt-2 leading-relaxed">
+                            Modern CNC laser-cut main gates, sliding compound gates, heavy security window grills, and decorative boundary grills.
+                        </p>
+                    </div>
+                    <button onclick="openModal('Gates & Grills Fabrication')" class="mt-6 w-full py-2.5 rounded-lg bg-steel-800 hover:bg-amber-500 hover:text-steel-950 text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2">
+                        <span>Request Quote</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="glass-panel rounded-2xl p-6 glass-panel-hover transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-48 rounded-xl overflow-hidden mb-6">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Railings & Handrails" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-steel-900/90 text-amber-400 text-xs font-tech font-bold px-3 py-1 rounded border border-steel-700">05</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white font-heading group-hover:text-amber-400 transition-colors">Railings & Handrails</h3>
+                        <p class="text-steel-400 text-sm mt-2 leading-relaxed">
+                            Glass + SS combination balcony handrails, matte-black powder-coated MS stair railings, and industrial safety barriers.
+                        </p>
+                    </div>
+                    <button onclick="openModal('Railings & Handrails')" class="mt-6 w-full py-2.5 rounded-lg bg-steel-800 hover:bg-amber-500 hover:text-steel-950 text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2">
+                        <span>Request Quote</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="glass-panel rounded-2xl p-6 glass-panel-hover transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-48 rounded-xl overflow-hidden mb-6">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?q=80&w=800&auto=format&fit=crop" alt="Staircase Fabrication" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-steel-900/90 text-amber-400 text-xs font-tech font-bold px-3 py-1 rounded border border-steel-700">06</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white font-heading group-hover:text-amber-400 transition-colors">Staircase Fabrication</h3>
+                        <p class="text-steel-400 text-sm mt-2 leading-relaxed">
+                            Floating metal staircases, spiral steel stairs, duplex internal stairways, and heavy external emergency fire exit steps.
+                        </p>
+                    </div>
+                    <button onclick="openModal('Staircase Fabrication')" class="mt-6 w-full py-2.5 rounded-lg bg-steel-800 hover:bg-amber-500 hover:text-steel-950 text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2">
+                        <span>Request Quote</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="glass-panel rounded-2xl p-6 glass-panel-hover transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-48 rounded-xl overflow-hidden mb-6">
+                            <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=800&auto=format&fit=crop" alt="Shed & Roofing Structures" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-steel-900/90 text-amber-400 text-xs font-tech font-bold px-3 py-1 rounded border border-steel-700">07</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white font-heading group-hover:text-amber-400 transition-colors">Shed & Roofing Structures</h3>
+                        <p class="text-steel-400 text-sm mt-2 leading-relaxed">
+                            Industrial warehouse sheds, factory roofs, polycarbonate terrace awnings, and heavy metal parking canopy fabrication.
+                        </p>
+                    </div>
+                    <button onclick="openModal('Shed & Roofing Structures')" class="mt-6 w-full py-2.5 rounded-lg bg-steel-800 hover:bg-amber-500 hover:text-steel-950 text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2">
+                        <span>Request Quote</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+                <!-- Service 8 -->
+                <div class="glass-panel rounded-2xl p-6 glass-panel-hover transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-48 rounded-xl overflow-hidden mb-6">
+                            <img src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?q=80&w=800&auto=format&fit=crop" alt="Industrial Fabrication" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-steel-900/90 text-amber-400 text-xs font-tech font-bold px-3 py-1 rounded border border-steel-700">08</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white font-heading group-hover:text-amber-400 transition-colors">Industrial Fabrication</h3>
+                        <p class="text-steel-400 text-sm mt-2 leading-relaxed">
+                            Machinery base frames, industrial work platforms, storage racks, hopper bins, and heavy plant equipment structures.
+                        </p>
+                    </div>
+                    <button onclick="openModal('Industrial Fabrication')" class="mt-6 w-full py-2.5 rounded-lg bg-steel-800 hover:bg-amber-500 hover:text-steel-950 text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2">
+                        <span>Request Quote</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+                <!-- Service 9 -->
+                <div class="glass-panel rounded-2xl p-6 glass-panel-hover transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-48 rounded-xl overflow-hidden mb-6">
+                            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format&fit=crop" alt="Welding & Metal Works" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-steel-900/90 text-amber-400 text-xs font-tech font-bold px-3 py-1 rounded border border-steel-700">09</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white font-heading group-hover:text-amber-400 transition-colors">Welding & Metal Repairs</h3>
+                        <p class="text-steel-400 text-sm mt-2 leading-relaxed">
+                            On-site argon TIG welding, heavy ARC welding, crack repairs, structural reinforcement, and smooth grinding finishing.
+                        </p>
+                    </div>
+                    <button onclick="openModal('Welding & Metal Works')" class="mt-6 w-full py-2.5 rounded-lg bg-steel-800 hover:bg-amber-500 hover:text-steel-950 text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2">
+                        <span>Request Quote</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WORK SHOWCASE / GALLERY SECTION -->
+    <section id="work" class="py-24 bg-steel-900 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div>
+                    <div class="inline-flex items-center gap-2 text-amber-500 font-tech font-bold tracking-widest text-sm uppercase">
+                        <i data-lucide="camera" class="w-4 h-4"></i> Portfolio Gallery
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-black font-heading text-white uppercase tracking-tight mt-2">
+                        Our Work In <span class="text-amber-500">Action</span>
+                    </h2>
+                </div>
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap gap-2 text-xs font-semibold" id="galleryFilters">
+                    <button data-filter="all" class="filter-btn active px-4 py-2 rounded-lg bg-amber-500 text-steel-950 font-bold">All Work</button>
+                    <button data-filter="structural" class="filter-btn px-4 py-2 rounded-lg bg-steel-800 text-steel-300 hover:bg-steel-700">Structural</button>
+                    <button data-filter="gates" class="filter-btn px-4 py-2 rounded-lg bg-steel-800 text-steel-300 hover:bg-steel-700">Gates & Railings</button>
+                    <button data-filter="roofing" class="filter-btn px-4 py-2 rounded-lg bg-steel-800 text-steel-300 hover:bg-steel-700">Sheds & Roofs</button>
+                    <button data-filter="welding" class="filter-btn px-4 py-2 rounded-lg bg-steel-800 text-steel-300 hover:bg-steel-700">Workshop Welding</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Continuous Horizontal Ticker / Marquee Banner -->
+        <div class="relative w-full overflow-hidden bg-steel-950/80 py-6 border-y border-steel-800 mb-16">
+            <div class="animate-marquee gap-6 px-4">
+                
+                <div class="w-80 h-52 shrink-0 rounded-xl overflow-hidden relative group cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1200&auto=format&fit=crop', 'Heavy Structural Steel Welding in Bengaluru')">
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=600&auto=format&fit=crop" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Welding">
+                    <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-transparent to-transparent opacity-80"></div>
+                    <span class="absolute bottom-3 left-3 text-white font-bold text-xs uppercase font-heading">Structural Beam MIG Welding</span>
+                </div>
+
+                <div class="w-80 h-52 shrink-0 rounded-xl overflow-hidden relative group cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop', 'Stainless Steel Handrail Polishing')">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="SS Polishing">
+                    <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-transparent to-transparent opacity-80"></div>
+                    <span class="absolute bottom-3 left-3 text-white font-bold text-xs uppercase font-heading">Precision SS Pipe Polishing</span>
+                </div>
+
+                <div class="w-80 h-52 shrink-0 rounded-xl overflow-hidden relative group cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop', 'Custom Architectural Gates')">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=600&auto=format&fit=crop" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Gates">
+                    <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-transparent to-transparent opacity-80"></div>
+                    <span class="absolute bottom-3 left-3 text-white font-bold text-xs uppercase font-heading">Laser-Cut Compound Gate</span>
+                </div>
+
+                <div class="w-80 h-52 shrink-0 rounded-xl overflow-hidden relative group cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=1200&auto=format&fit=crop', 'Industrial Roof Shed Frame')">
+                    <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=600&auto=format&fit=crop" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Industrial Shed">
+                    <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-transparent to-transparent opacity-80"></div>
+                    <span class="absolute bottom-3 left-3 text-white font-bold text-xs uppercase font-heading">Factory Roof Truss Assembly</span>
+                </div>
+
+                <div class="w-80 h-52 shrink-0 rounded-xl overflow-hidden relative group cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?q=80&w=1200&auto=format&fit=crop', 'Machinery Steel Frame')">
+                    <img src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?q=80&w=600&auto=format&fit=crop" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Machinery Chassis">
+                    <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-transparent to-transparent opacity-80"></div>
+                    <span class="absolute bottom-3 left-3 text-white font-bold text-xs uppercase font-heading">Industrial Machine Chassis</span>
+                </div>
+
+                <!-- Duplicate set for seamless continuous marquee loop -->
+                <div class="w-80 h-52 shrink-0 rounded-xl overflow-hidden relative group cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1200&auto=format&fit=crop', 'Heavy Structural Steel Welding in Bengaluru')">
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=600&auto=format&fit=crop" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Welding">
+                    <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-transparent to-transparent opacity-80"></div>
+                    <span class="absolute bottom-3 left-3 text-white font-bold text-xs uppercase font-heading">Structural Beam MIG Welding</span>
+                </div>
+
+                <div class="w-80 h-52 shrink-0 rounded-xl overflow-hidden relative group cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop', 'Stainless Steel Handrail Polishing')">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="SS Polishing">
+                    <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-transparent to-transparent opacity-80"></div>
+                    <span class="absolute bottom-3 left-3 text-white font-bold text-xs uppercase font-heading">Precision SS Pipe Polishing</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Filterable Grid Photo Gallery -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid">
+                
+                <!-- Item 1 -->
+                <div class="gallery-item structural group relative h-72 rounded-2xl overflow-hidden border border-steel-800 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1200&auto=format&fit=crop', 'High-Precision MIG Welding on Steel Columns')">
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format&fit=crop" loading="lazy" alt="MIG Welding" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-steel-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-0 p-6">
+                        <span class="text-amber-400 font-tech font-bold text-xs uppercase tracking-wider">Structural Fabrication</span>
+                        <h3 class="text-white font-bold text-lg font-heading">Factory Beam Joint Welding</h3>
+                    </div>
+                    <div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-steel-900/80 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i data-lucide="maximize-2" class="w-5 h-5"></i>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="gallery-item gates group relative h-72 rounded-2xl overflow-hidden border border-steel-800 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop', 'Modern Architectural Main Entrance Gate')">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" loading="lazy" alt="Metal Gate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-steel-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-0 p-6">
+                        <span class="text-amber-400 font-tech font-bold text-xs uppercase tracking-wider">Gates & Grills</span>
+                        <h3 class="text-white font-bold text-lg font-heading">Custom Sliding Main Gate</h3>
+                    </div>
+                    <div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-steel-900/80 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i data-lucide="maximize-2" class="w-5 h-5"></i>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="gallery-item roofing group relative h-72 rounded-2xl overflow-hidden border border-steel-800 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=1200&auto=format&fit=crop', 'Warehouse Industrial Steel Roof Shed')">
+                    <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=800&auto=format&fit=crop" loading="lazy" alt="Industrial Shed" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-steel-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-0 p-6">
+                        <span class="text-amber-400 font-tech font-bold text-xs uppercase tracking-wider">Roofing Structures</span>
+                        <h3 class="text-white font-bold text-lg font-heading">Industrial Factory Shed Roof</h3>
+                    </div>
+                    <div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-steel-900/80 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i data-lucide="maximize-2" class="w-5 h-5"></i>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="gallery-item gates group relative h-72 rounded-2xl overflow-hidden border border-steel-800 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop', 'Stainless Steel & Glass Balcony Railing')">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" loading="lazy" alt="SS Railing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-steel-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-0 p-6">
+                        <span class="text-amber-400 font-tech font-bold text-xs uppercase tracking-wider">Gates & Railings</span>
+                        <h3 class="text-white font-bold text-lg font-heading">SS 304 Glass Handrails</h3>
+                    </div>
+                    <div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-steel-900/80 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i data-lucide="maximize-2" class="w-5 h-5"></i>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="gallery-item welding group relative h-72 rounded-2xl overflow-hidden border border-steel-800 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?q=80&w=1200&auto=format&fit=crop', 'Workshop Precision Metal Grinding & Assembling')">
+                    <img src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?q=80&w=800&auto=format&fit=crop" loading="lazy" alt="Metal Grinding" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-steel-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-0 p-6">
+                        <span class="text-amber-400 font-tech font-bold text-xs uppercase tracking-wider">Workshop Works</span>
+                        <h3 class="text-white font-bold text-lg font-heading">Metal Grinding & Finishing</h3>
+                    </div>
+                    <div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-steel-900/80 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i data-lucide="maximize-2" class="w-5 h-5"></i>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="gallery-item structural group relative h-72 rounded-2xl overflow-hidden border border-steel-800 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?q=80&w=1200&auto=format&fit=crop', 'Floating Steel Internal Staircase Structure')">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?q=80&w=800&auto=format&fit=crop" loading="lazy" alt="Spiral Staircase" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-steel-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-0 p-6">
+                        <span class="text-amber-400 font-tech font-bold text-xs uppercase tracking-wider">Structural Fabrication</span>
+                        <h3 class="text-white font-bold text-lg font-heading">Floating Metal Staircase Frame</h3>
+                    </div>
+                    <div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-steel-900/80 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i data-lucide="maximize-2" class="w-5 h-5"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US SECTION -->
+    <section id="whyus" class="py-24 bg-steel-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 text-amber-500 font-tech font-bold tracking-widest text-sm uppercase">
+                    <i data-lucide="award" class="w-4 h-4"></i> Quality Standards
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-black font-heading text-white uppercase tracking-tight mt-2">
+                    Why Choose <span class="text-amber-500">Advika Fabrications?</span>
+                </h2>
+                <p class="text-steel-400 text-base mt-4">
+                    Built on uncompromising standards of metal integrity, precise dimensional accuracy, and client-first commitment.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Feature 1 -->
+                <div class="p-6 rounded-2xl bg-steel-900 border border-steel-800 hover:border-amber-500/50 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-500 flex items-center justify-center mb-5">
+                        <i data-lucide="crosshair" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg font-heading mb-2">Precision Workmanship</h3>
+                    <p class="text-steel-400 text-sm leading-relaxed">
+                        Accurate laser cutting, strict angle tolerances, and clean weld seam grinding for exact fitment.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-6 rounded-2xl bg-steel-900 border border-steel-800 hover:border-amber-500/50 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-500 flex items-center justify-center mb-5">
+                        <i data-lucide="shield" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg font-heading mb-2">Certified Steel Materials</h3>
+                    <p class="text-steel-400 text-sm leading-relaxed">
+                        We source strictly heavy-gauge Tata & JSW steel section channels, pipes, and sheets for guaranteed structural safety.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-6 rounded-2xl bg-steel-900 border border-steel-800 hover:border-amber-500/50 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-500 flex items-center justify-center mb-5">
+                        <i data-lucide="hammer" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg font-heading mb-2">Durable Construction</h3>
+                    <p class="text-steel-400 text-sm leading-relaxed">
+                        Anti-corrosive epoxy primer coating and heavy structural anchoring engineered for decades of endurance.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="p-6 rounded-2xl bg-steel-900 border border-steel-800 hover:border-amber-500/50 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-500 flex items-center justify-center mb-5">
+                        <i data-lucide="pen-tool" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg font-heading mb-2">Custom Tailored Designs</h3>
+                    <p class="text-steel-400 text-sm leading-relaxed">
+                        Every gate, stair, or truss is custom fabricated according to site dimensions and client aesthetics.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="p-6 rounded-2xl bg-steel-900 border border-steel-800 hover:border-amber-500/50 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-500 flex items-center justify-center mb-5">
+                        <i data-lucide="eye" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg font-heading mb-2">Attention to Detail</h3>
+                    <p class="text-steel-400 text-sm leading-relaxed">
+                        Smooth corner joints, flush weld grinding, and neat edge beveling on every metal component.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="p-6 rounded-2xl bg-steel-900 border border-steel-800 hover:border-amber-500/50 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-500 flex items-center justify-center mb-5">
+                        <i data-lucide="clock" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg font-heading mb-2">Reliable Timelines</h3>
+                    <p class="text-steel-400 text-sm leading-relaxed">
+                        Prompt site measurements, rapid workshop production, and strictly scheduled on-site assembly.
+                    </p>
+                </div>
+
+                <!-- Feature 7 -->
+                <div class="p-6 rounded-2xl bg-steel-900 border border-steel-800 hover:border-amber-500/50 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-500 flex items-center justify-center mb-5">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg font-heading mb-2">Professional Finishing</h3>
+                    <p class="text-steel-400 text-sm leading-relaxed">
+                        Powder coating, PU metallic paint, or high-luster stainless steel mirror polishing according to demand.
+                    </p>
+                </div>
+
+                <!-- Feature 8 -->
+                <div class="p-6 rounded-2xl bg-steel-900 border border-steel-800 hover:border-amber-500/50 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-500 flex items-center justify-center mb-5">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg font-heading mb-2">Customer-Focused</h3>
+                    <p class="text-steel-400 text-sm leading-relaxed">
+                        Transparent upfront pricing with zero hidden charges and dedicated after-installation support in Bengaluru.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section id="process" class="py-24 bg-steel-900 border-t border-steel-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 text-amber-500 font-tech font-bold tracking-widest text-sm uppercase">
+                    <i data-lucide="list-checks" class="w-4 h-4"></i> How We Work
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-black font-heading text-white uppercase tracking-tight mt-2">
+                    Simple <span class="text-amber-500">4-Step Process</span>
+                </h2>
+                <p class="text-steel-400 text-base mt-4">
+                    From initial site consultation to flawless final steel erection.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                
+                <!-- Step 1 -->
+                <div class="relative bg-steel-950 p-6 rounded-2xl border border-steel-800 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-500 text-steel-950 font-black font-tech text-2xl flex items-center justify-center mb-6 shadow-lg shadow-amber-500/20">
+                        01
+                    </div>
+                    <h3 class="text-white font-bold text-xl font-heading mb-2">Discuss & Survey</h3>
+                    <p class="text-steel-400 text-sm leading-relaxed">
+                        We visit your site in Bengaluru to take precise dimensions, review drawings, and understand load requirement parameters.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative bg-steel-950 p-6 rounded-2xl border border-steel-800 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-steel-800 text-amber-500 font-black font-tech text-2xl flex items-center justify-center mb-6 border border-steel-700">
+                        02
+                    </div>
+                    <h3 class="text-white font-bold text-xl font-heading mb-2">Design & Planning</h3>
+                    <p class="text-steel-400 text-sm leading-relaxed">
+                        Material selection (MS/SS grades, section sizes), CAD blueprint verification, material cost estimate, and scheduling.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative bg-steel-950 p-6 rounded-2xl border border-steel-800 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-steel-800 text-amber-500 font-black font-tech text-2xl flex items-center justify-center mb-6 border border-steel-700">
+                        03
+                    </div>
+                    <h3 class="text-white font-bold text-xl font-heading mb-2">Fabrication & Finish</h3>
+                    <p class="text-steel-400 text-sm leading-relaxed">
+                        Heavy cutting, precision TIG/MIG welding, weld bead grinding, red oxide anti-rust priming, and powder coating.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative bg-steel-950 p-6 rounded-2xl border border-steel-800 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-500 text-steel-950 font-black font-tech text-2xl flex items-center justify-center mb-6 shadow-lg shadow-amber-500/20">
+                        04
+                    </div>
+                    <h3 class="text-white font-bold text-xl font-heading mb-2">Delivery & Erection</h3>
+                    <p class="text-steel-400 text-sm leading-relaxed">
+                        Safe transport to site, anchor bolting/field welding assembly, final alignment check, and client handover.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & QUOTE SECTION -->
+    <section id="contact" class="py-24 bg-steel-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Let's Build CTA Banner -->
+            <div class="rounded-3xl bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 p-8 sm:p-12 mb-16 text-steel-950 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl shadow-amber-500/20">
+                <div class="space-y-2">
+                    <span class="font-tech uppercase tracking-widest font-black text-sm text-steel-950/80">Got A Fabrication Project?</span>
+                    <h2 class="text-3xl sm:text-5xl font-black font-heading uppercase tracking-tight">
+                        Let's Build Something Strong.
+                    </h2>
+                    <p class="text-steel-950/90 font-medium text-base sm:text-lg max-w-2xl">
+                        Get in touch directly with our expert team for instant quotes, technical consultation, and site inspection in Bengaluru.
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 shrink-0 w-full md:w-auto">
+                    <a href="tel:9060975164" class="px-8 py-4 bg-steel-950 text-white font-black rounded-xl hover:bg-steel-900 transition-colors flex items-center justify-center gap-3 text-base shadow-xl">
+                        <i data-lucide="phone-call" class="w-5 h-5 text-amber-500"></i> Call 9060975164
+                    </a>
+                    <a href="mailto:ashokshetty@gmail.com" class="px-8 py-4 bg-white text-steel-950 font-black rounded-xl hover:bg-steel-100 transition-colors flex items-center justify-center gap-3 text-base shadow-xl">
+                        <i data-lucide="mail" class="w-5 h-5"></i> Email Us
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact Grid & Interactive Estimator Form -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Details & Map Card -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-black font-heading text-white uppercase tracking-tight">Direct Contact Info</h3>
+                        <p class="text-steel-400 text-sm mt-2">Visit our workshop or reach out via phone & email.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Phone Card -->
+                        <a href="tel:9060975164" class="p-5 rounded-2xl bg-steel-900 border border-steel-800 hover:border-amber-500/50 transition-all duration-300 flex items-center gap-4 group">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-500 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                                <i data-lucide="phone-call" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-steel-400 font-tech uppercase tracking-wider block">Direct Phone / WhatsApp</span>
+                                <span class="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">+91 9060975164</span>
+                            </div>
+                        </a>
+
+                        <!-- Email Card -->
+                        <a href="mailto:ashokshetty@gmail.com" class="p-5 rounded-2xl bg-steel-900 border border-steel-800 hover:border-amber-500/50 transition-all duration-300 flex items-center gap-4 group">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-500 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <span class="text-xs text-steel-400 font-tech uppercase tracking-wider block">Official Email</span>
+                                <span class="text-base font-bold text-white group-hover:text-amber-400 transition-colors truncate block">ashokshetty@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <!-- Address Card -->
+                        <div class="p-5 rounded-2xl bg-steel-900 border border-steel-800 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-500 flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-steel-400 font-tech uppercase tracking-wider block">Workshop Location</span>
+                                <span class="text-base font-bold text-white">Bengaluru, Karnataka, India</span>
+                            </div>
+                        </div>
+
+                        <!-- Work Hours Card -->
+                        <div class="p-5 rounded-2xl bg-steel-900 border border-steel-800 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-500 flex items-center justify-center shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-steel-400 font-tech uppercase tracking-wider block">Working Hours</span>
+                                <span class="text-sm font-bold text-white">Monday – Saturday: 8:30 AM – 8:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Styled Google Map Container -->
+                    <div class="h-64 rounded-2xl overflow-hidden border border-steel-800 relative bg-steel-900">
+                        <iframe 
+                            title="Advika Fabrications Location Bengaluru"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.886539092!2d77.466125!3d12.95396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8380f535f639677!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                            class="w-full h-full filter invert-[0.9] hue-rotate-180 opacity-80" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                        <div class="absolute bottom-3 left-3 bg-steel-950/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-steel-800 text-xs text-amber-400 font-tech font-bold flex items-center gap-2">
+                            <i data-lucide="navigation" class="w-3.5 h-3.5"></i> Serving All Area Zones in Bengaluru
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Quote Estimation Request Form -->
+                <div class="lg:col-span-7 bg-steel-900 p-8 sm:p-10 rounded-3xl border border-steel-800 shadow-2xl">
+                    <div class="mb-8">
+                        <span class="text-amber-500 font-tech font-bold text-xs uppercase tracking-widest">Instant Project Inquiry</span>
+                        <h3 class="text-2xl sm:text-3xl font-black font-heading text-white uppercase tracking-tight mt-1">
+                            Request A Free Estimate
+                        </h3>
+                        <p class="text-steel-400 text-sm mt-1">Fill out your project specs and we will call you back within 1 hour.</p>
+                    </div>
+
+                    <form id="quoteForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold font-tech uppercase text-steel-300 mb-2">Your Full Name *</label>
+                                <input type="text" required placeholder="e.g. Rajesh Kumar" class="w-full px-4 py-3 rounded-xl bg-steel-950 border border-steel-800 text-white placeholder-steel-600 focus:outline-none focus:border-amber-500 text-sm transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold font-tech uppercase text-steel-300 mb-2">Phone Number *</label>
+                                <input type="tel" required placeholder="e.g. 9876543210" class="w-full px-4 py-3 rounded-xl bg-steel-950 border border-steel-800 text-white placeholder-steel-600 focus:outline-none focus:border-amber-500 text-sm transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold font-tech uppercase text-steel-300 mb-2">Email Address</label>
+                                <input type="email" placeholder="e.g. rajesh@gmail.com" class="w-full px-4 py-3 rounded-xl bg-steel-950 border border-steel-800 text-white placeholder-steel-600 focus:outline-none focus:border-amber-500 text-sm transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold font-tech uppercase text-steel-300 mb-2">Service Required *</label>
+                                <select id="formServiceSelect" required class="w-full px-4 py-3 rounded-xl bg-steel-950 border border-steel-800 text-white focus:outline-none focus:border-amber-500 text-sm transition-colors">
+                                    <option value="">Select Service Needed...</option>
+                                    <option value="MS & SS Fabrication">MS & SS Fabrication</option>
+                                    <option value="Structural Fabrication">Structural Fabrication (I-Beams / Trusses)</option>
+                                    <option value="Custom Metal Fabrication">Custom Metal Fabrication</option>
+                                    <option value="Gates & Safety Grills">Gates & Safety Grills</option>
+                                    <option value="Railings & Handrails">Railings & Handrails</option>
+                                    <option value="Staircase Fabrication">Staircase Fabrication</option>
+                                    <option value="Shed & Roofing Structures">Shed & Roofing Structures</option>
+                                    <option value="Industrial Fabrication">Industrial Machine Frames</option>
+                                    <option value="Welding & On-site Repair">Welding & Repair Work</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold font-tech uppercase text-steel-300 mb-2">Project Details & Dimensions (Approx Sq.ft or Weight)</label>
+                            <textarea rows="4" placeholder="Describe your requirement (e.g. 30x40 Terrace Roofing Shed requirement in Whitefield, Bengaluru)..." class="w-full px-4 py-3 rounded-xl bg-steel-950 border border-steel-800 text-white placeholder-steel-600 focus:outline-none focus:border-amber-500 text-sm transition-colors resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-steel-950 font-black rounded-xl text-base tracking-wider uppercase transition-all duration-300 shadow-lg shadow-amber-500/25 flex items-center justify-center gap-2">
+                            <i data-lucide="send" class="w-5 h-5"></i> Submit Estimation Request
+                        </button>
+                        
+                        <p class="text-xs text-center text-steel-500">
+                            🔒 Your phone & details are kept strictly confidential for quotation purposes only.
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-steel-950 border-t border-steel-800/80 pt-16 pb-12 text-steel-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-steel-800/60">
+                
+                <!-- Col 1: Brand -->
+                <div class="space-y-4">
+                    <a href="#home" class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center text-steel-950 font-black">
+                            <i data-lucide="anvil" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-xl font-black font-heading text-white uppercase">ADVIKA <span class="text-amber-500">FAB</span></span>
+                    </a>
+                    <p class="text-xs text-steel-400 leading-relaxed">
+                        Precision Fabrication. Built to Last. Top-quality metal crafting, welding, structural steel frameworks, and custom architectural fabrications in Bengaluru, Karnataka.
+                    </p>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold font-tech uppercase tracking-wider mb-4">Quick Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#home" class="hover:text-amber-500 transition-colors">Home Page</a></li>
+                        <li><a href="#about" class="hover:text-amber-500 transition-colors">About Company</a></li>
+                        <li><a href="#services" class="hover:text-amber-500 transition-colors">Our Services</a></li>
+                        <li><a href="#work" class="hover:text-amber-500 transition-colors">Work Showcase</a></li>
+                        <li><a href="#whyus" class="hover:text-amber-500 transition-colors">Why Choose Us</a></li>
+                        <li><a href="#contact" class="hover:text-amber-500 transition-colors">Get A Quote</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Services -->
+                <div>
+                    <h4 class="text-white font-bold font-tech uppercase tracking-wider mb-4">Fabrication Solutions</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><span class="text-steel-300">MS & SS Custom Works</span></li>
+                        <li><span class="text-steel-300">Heavy Structural Beams</span></li>
+                        <li><span class="text-steel-300">Compound Sliding Gates</span></li>
+                        <li><span class="text-steel-300">Stainless Steel Railings</span></li>
+                        <li><span class="text-steel-300">Industrial Factory Sheds</span></li>
+                        <li><span class="text-steel-300">Emergency & Spiral Staircases</span></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Direct Contacts -->
+                <div>
+                    <h4 class="text-white font-bold font-tech uppercase tracking-wider mb-4">Direct Contact</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+                            <a href="tel:9060975164" class="text-white hover:text-amber-400 font-bold">9060975164</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-amber-500"></i>
+                            <a href="mailto:ashokshetty@gmail.com" class="text-steel-300 hover:text-amber-400">ashokshetty@gmail.com</a>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-amber-500 shrink-0 mt-0.5"></i>
+                            <span>Bengaluru, Karnataka, India</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Copyright Notice -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-steel-500 gap-4">
+                <p>© 2026 Advika Fabrications. All Rights Reserved.</p>
+                <p class="font-tech uppercase tracking-widest text-steel-400">Precision Metalwork • Bengaluru, India</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL FOR GALLERY IMAGE INSPECTION -->
+    <div id="lightboxModal" class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-amber-500 p-2 focus:outline-none">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <div class="max-w-4xl w-full text-center space-y-4">
+            <img id="lightboxImg" src="" alt="Zoomed Fabrication Image" class="max-h-[80vh] mx-auto rounded-2xl border border-steel-800 shadow-2xl object-contain">
+            <p id="lightboxCaption" class="text-white font-heading font-bold text-lg text-amber-400"></p>
+        </div>
+    </div>
+
+    <!-- GENERAL QUOTE REQUEST MODAL -->
+    <div id="quoteModal" class="fixed inset-0 z-[90] bg-black/80 backdrop-blur-md flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-steel-900 border border-steel-800 rounded-3xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-steel-400 hover:text-white">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div class="mb-6">
+                <span id="modalServiceBadge" class="text-amber-500 font-tech font-bold text-xs uppercase tracking-widest">Inquiry</span>
+                <h3 id="modalTitle" class="text-2xl font-black font-heading text-white uppercase tracking-tight">Request Free Quote</h3>
+            </div>
+            <form onsubmit="handleModalSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold font-tech uppercase text-steel-300 mb-1">Your Name *</label>
+                    <input type="text" required class="w-full px-4 py-2.5 rounded-xl bg-steel-950 border border-steel-800 text-white focus:outline-none focus:border-amber-500 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold font-tech uppercase text-steel-300 mb-1">Phone Number *</label>
+                    <input type="tel" required class="w-full px-4 py-2.5 rounded-xl bg-steel-950 border border-steel-800 text-white focus:outline-none focus:border-amber-500 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold font-tech uppercase text-steel-300 mb-1">Requirement Note</label>
+                    <textarea rows="3" placeholder="Dimensions or location details in Bengaluru..." class="w-full px-4 py-2.5 rounded-xl bg-steel-950 border border-steel-800 text-white focus:outline-none focus:border-amber-500 text-sm resize-none"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 bg-amber-500 hover:bg-amber-600 text-steel-950 font-black rounded-xl text-sm uppercase tracking-wider transition-colors">
+                    Submit Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="fixed bottom-6 right-6 z-[110] bg-emerald-600 text-white px-6 py-4 rounded-xl shadow-2xl font-bold flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300">
+        <i data-lucide="check-circle" class="w-6 h-6"></i>
+        <span id="toastMsg">Inquiry Submitted Successfully! We will call you soon.</span>
+    </div>
+
+    <!-- CLIENT-SIDE VANILLA JAVASCRIPT LOGIC -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // 1. Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileDrawer.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileDrawer.classList.add('hidden');
+            });
+        });
+
+        // 2. Interactive Spark Particles Canvas for Hero Background
+        const canvas = document.getElementById('sparkCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = canvas.parentElement.clientWidth;
+            canvas.height = canvas.parentElement.clientHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        class SparkParticle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height * 0.7;
+                this.vx = (Math.random() - 0.5) * 3;
+                this.vy = Math.random() * 2 + 1;
+                this.size = Math.random() * 2.5 + 1;
+                this.alpha = Math.random() * 0.8 + 0.2;
+                this.color = Math.random() > 0.3 ? '#f59e0b' : '#ff6b00';
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                this.alpha -= 0.008;
+                if (this.alpha <= 0 || this.y > canvas.height) {
+                    this.reset();
+                }
+            }
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = this.alpha;
+                ctx.fillStyle = this.color;
+                ctx.shadowBlur = 8;
+                ctx.shadowColor = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        for (let i = 0; i < 45; i++) {
+            particles.push(new SparkParticle());
+        }
+
+        function animateSparks() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateSparks);
+        }
+        animateSparks();
+
+        // 3. Before / After Interactive Drag Slider Logic
+        const sliderContainer = document.getElementById('beforeAfterSlider');
+        const beforeWrapper = document.getElementById('beforeImageWrapper');
+        const beforeImg = document.getElementById('beforeImage');
+        const handle = document.getElementById('sliderHandle');
+        let isSliding = false;
+
+        function setSliderPos(x) {
+            const rect = sliderContainer.getBoundingClientRect();
+            let pos = x - rect.left;
+            if (pos < 0) pos = 0;
+            if (pos > rect.width) pos = rect.width;
+            const percentage = (pos / rect.width) * 100;
+            
+            beforeWrapper.style.width = percentage + '%';
+            handle.style.left = percentage + '%';
+            beforeImg.style.width = rect.width + 'px';
+        }
+
+        sliderContainer.addEventListener('mousedown', (e) => { isSliding = true; setSliderPos(e.clientX); });
+        window.addEventListener('mouseup', () => isSliding = false);
+        window.addEventListener('mousemove', (e) => { if (isSliding) setSliderPos(e.clientX); });
+
+        sliderContainer.addEventListener('touchstart', (e) => { isSliding = true; setSliderPos(e.touches[0].clientX); });
+        window.addEventListener('touchend', () => isSliding = false);
+        window.addEventListener('touchmove', (e) => { if (isSliding) setSliderPos(e.touches[0].clientX); });
+
+        // Synchronize before image width on window resize
+        window.addEventListener('resize', () => {
+            if (sliderContainer) {
+                beforeImg.style.width = sliderContainer.getBoundingClientRect().width + 'px';
+            }
+        });
+
+        // 4. Counter Animated Numbers
+        const counters = document.querySelectorAll('.counter');
+        let counterAnimated = false;
+
+        window.addEventListener('scroll', () => {
+            const heroStats = document.querySelector('.counter');
+            if (!heroStats) return;
+            const pos = heroStats.getBoundingClientRect().top;
+            if (pos < window.innerHeight && !counterAnimated) {
+                counterAnimated = true;
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    let count = 0;
+                    const speed = target / 50;
+                    const updateCount = () => {
+                        count += speed;
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count) + '+';
+                            setTimeout(updateCount, 25);
+                        } else {
+                            counter.innerText = target + '+';
+                        }
+                    };
+                    updateCount();
+                });
+            }
+        });
+
+        // 5. Portfolio Gallery Filter Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-amber-500', 'text-steel-950', 'font-bold');
+                    b.classList.add('bg-steel-800', 'text-steel-300');
+                });
+                btn.classList.add('active', 'bg-amber-500', 'text-steel-950', 'font-bold');
+                btn.classList.remove('bg-steel-800', 'text-steel-300');
+
+                const filter = btn.getAttribute('data-filter');
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 6. Lightbox Modal Functions
+        const lightboxModal = document.getElementById('lightboxModal');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+
+        function openLightbox(src, caption) {
+            lightboxImg.src = src;
+            lightboxCaption.innerText = caption;
+            lightboxModal.classList.remove('hidden');
+            setTimeout(() => {
+                lightboxModal.classList.remove('opacity-0');
+            }, 10);
+        }
+
+        function closeLightbox() {
+            lightboxModal.classList.add('opacity-0');
+            setTimeout(() => {
+                lightboxModal.classList.add('hidden');
+            }, 300);
+        }
+
+        // 7. General Quote Request Modal
+        const quoteModal = document.getElementById('quoteModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalServiceBadge = document.getElementById('modalServiceBadge');
+
+        function openModal(serviceName) {
+            modalTitle.innerText = serviceName || 'Get Free Quote';
+            modalServiceBadge.innerText = serviceName ? 'Service Inquiry' : 'Free Estimate';
+            quoteModal.classList.remove('hidden');
+            setTimeout(() => {
+                quoteModal.classList.remove('opacity-0');
+            }, 10);
+        }
+
+        function closeModal() {
+            quoteModal.classList.add('opacity-0');
+            setTimeout(() => {
+                quoteModal.classList.add('hidden');
+            }, 300);
+        }
+
+        // 8. Toast Notifications and Form Handling
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').innerText = msg;
+            toast.classList.remove('opacity-0', 'translate-y-20');
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-20');
+            }, 4000);
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            showToast('Thank you! Your quote request has been sent to Advika Fabrications.');
+            e.target.reset();
+        }
+
+        function handleModalSubmit(e) {
+            e.preventDefault();
+            closeModal();
+            showToast('Inquiry submitted successfully! Ashok Shetty will contact you shortly.');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
